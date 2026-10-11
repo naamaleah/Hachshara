@@ -40,3 +40,56 @@ nav{
     background-color: transparent;
     cursor: pointer;
 }
+
+body{
+    margin: 0;
+    background: linear-gradient(to bottom right, #f3efff, #fff1e6);
+    font-family: Arial, sans-serif;
+}
+
+.gallery-section{
+    text-align: center;
+    max-width: 1100px;
+    margin: 4rem auto;
+    width: 90%;
+}
+
+.gallery-section figure{
+    display: inline-block;
+    width: 20%;
+    margin: 1%;
+    padding: 0pc;
+    vertical-align: top;
+    height: 60%;
+  
+}
+
+.gallery-section figure img {
+      border-radius: 1rem;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+}
+.discover{
+    text-align: center;
+}
+
+.discover article{
+    display: inline-block;
+    width: 40%;
+}
+
+.discover article img{
+    border-radius: 1pc;
+    width: 20%;
+}
+
+.gallery-section h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-section figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
