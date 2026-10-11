@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Submitting an anonymous complaint</title>
+</head>
+<body>
+    <header>
+        <h1>Submit an Anonymous Complaint</h1>  
+    </header>
+    <main class="container">
+        <form id="complaint-form">
+            <select id="complaint-type" name="complaint-type">
+                <option value="food">Harassment</option>
+                <option value="equipment">Discrimination</option>
+                <option value="orders">Safety Concern</option>
+                <option value="other">Other</option>
+            </select>
+            <textarea id="complaint-text" name="complaint-text" placeholder="Describe your complaint here..." required></textarea>
+            <button class="submit-complaint" type="submit">Submit Complaint</button>
+        </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 800px;
+
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 1rem;
+}
+h1 {
+    margin-bottom: 2rem;
+}
+
+form * {
+    
+    display: block;
+    width: 100%;
+    
+}
+
+#complaint-form {
+
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #326996;
+    border-radius: 10px;
+    width: 30%;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1rem;
+    height:10%;
+
+}
+

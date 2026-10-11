@@ -1,0 +1,54 @@
+.logo-area, nav, .actions {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-area{
+    width:20%;
+
+}
+
+nav{
+    width:55%;
+    text-align: center;
+}
+
+.actions{
+    width:24%;
+    text-align: right;
+}
+
+main{
+    text-align: center;
+}
+
+main .main-content{
+    width:40%;
+    margin: 180px auto 0;
+}
+
+.main-content h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+form{
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+}
+
+.form-actions button{
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.logo-area img{
+    width: 2rem;
+    height: auto;
+    vertical-align: middle;
+}
+
+.logo-area span {
+    vertical-align: middle;
+}
