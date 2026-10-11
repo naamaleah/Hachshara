@@ -1,0 +1,42 @@
+.logo-area, nav, .actions {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-area{
+    width:20%;
+
+}
+
+nav{
+    width:55%;
+    text-align: center;
+}
+
+.actions{
+    width:24%;
+    text-align: right;
+}
+
+.logo-area img{
+    width: 2rem;
+    height: auto;
+    vertical-align: middle;
+}
+
+.logo-area span {
+    vertical-align: middle;
+}
+
+.actions button:first-child {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.4rem 0.8rem;
+}
+.actions button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
