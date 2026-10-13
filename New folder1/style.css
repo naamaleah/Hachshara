@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Lora&family=Pacifico&display=swap');
+.font-one {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-two {
+    font-family: 'Lora', serif;
+}
+
+.font-three {
+    font-family: 'Pacifico', cursive;
+}
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.post-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.post-text::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.post-text::first-line {
+    font-weight: bold;
+}
+
+.delete-btn {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+}
+
+.delete-btn:hover {
+    background-color: red;
+}
+
+.dark-toggle:checked ~ .card-content {
+    background-color: #222;
+    color: white;
+}
+@media (max-width: 700px) {
+    .posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dark-toggle:checked ~ .card-content {
+    background-color: #222;
+    color: white;
+}

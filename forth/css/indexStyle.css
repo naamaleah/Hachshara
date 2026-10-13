@@ -35,6 +35,8 @@ nav{
     border-radius: 1rem;
     padding: 0.4rem 0.8rem;
 }
+
+
 .actions button {
     border: none;
     background-color: transparent;
@@ -64,5 +66,10 @@ form{
 .form-actions button{
     text-align: left;
     margin-top: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: 2%;
+
 }
 
