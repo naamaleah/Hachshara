@@ -1,0 +1,698 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0d1220;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    width: 90%;
+
+    margin: auto;
+
+    padding: 1.5rem 0;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 150px;
+
+    display: block;
+}
+
+
+/*
+   NAVIGATION IS NEXT TO LOGO
+*/
+
+.main-nav {
+    display: flex;
+
+    gap: 1.5rem;
+
+    margin-left: 2.5rem;
+}
+
+.main-nav a,
+.header-actions a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+}
+
+
+/*
+   PUSH LOGIN TO RIGHT
+*/
+
+.header-actions {
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.sign-up {
+    padding: 0.7rem 1.4rem;
+
+    border: 1px solid #20c878;
+
+    border-radius: 2rem;
+}
+
+.menu-button {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   TOKENOMICS HERO
+========================= */
+
+.tokenomics-hero {
+    width: 82%;
+
+    margin: auto;
+
+    padding: 4rem 0 1rem;
+}
+
+.tokenomics-heading {
+    max-width: 22rem;
+}
+
+.tokenomics-heading h1 {
+    margin: 0;
+
+    font-size: 1.75rem;
+
+    line-height: 1.15;
+}
+
+
+/* TOTAL */
+
+.total-supply {
+    margin-top: -2.5rem;
+
+    text-align: center;
+}
+
+.total-supply p {
+    margin: 0 0 0.4rem;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+}
+
+.total-supply strong {
+    display: block;
+
+    color: #ffd100;
+
+    font-size: 4.2rem;
+
+    line-height: 1;
+}
+
+.total-supply span {
+    display: block;
+
+    margin-top: 0.5rem;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   DISTRIBUTION
+========================= */
+
+.distribution-layout {
+    margin-top: 1.5rem;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 2.4fr 1fr;
+
+    align-items: center;
+
+    gap: 1.5rem;
+}
+
+.token-chart {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+}
+
+.token-chart img {
+    width: 100%;
+
+    max-width: 38rem;
+
+    display: block;
+}
+
+.distribution-stat p {
+    margin: 0 0 0.5rem;
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+}
+
+.distribution-stat strong {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    font-size: 2.2rem;
+}
+
+.distribution-stat span {
+    display: block;
+
+    font-size: 0.75rem;
+}
+
+.preminted strong {
+    color: #2997ff;
+}
+
+.daily {
+    text-align: right;
+}
+
+.daily strong {
+    color: #f20b24;
+}
+
+
+/* =========================
+   YEARS
+========================= */
+
+.years-section {
+    width: 82%;
+
+    margin: auto;
+
+    padding: 2.5rem 0 5rem;
+}
+
+.years-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 0.8rem;
+}
+
+.year-card {
+    min-height: 8rem;
+
+    padding: 1.1rem;
+
+    background-color: #151b2b;
+
+    border-radius: 0.9rem;
+}
+
+.year-title {
+    margin-bottom: 0.8rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.45rem;
+
+    font-size: 0.7rem;
+}
+
+.year-dot {
+    width: 0.7rem;
+
+    height: 0.7rem;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+.year-dot.green {
+    background-color: #20c878;
+}
+
+.year-dot.yellow {
+    background-color: #ffd100;
+}
+
+.year-dot.blue {
+    background-color: #2997ff;
+}
+
+.year-dot.red {
+    background-color: #f20b24;
+}
+
+.year-card h2 {
+    margin: 0 0 0.6rem;
+
+    font-size: 0.78rem;
+}
+
+.year-card p {
+    margin: 0.25rem 0;
+
+    color: #a1a7b5;
+
+    font-size: 0.75rem;
+}
+
+.year-card small {
+    color: #72798a;
+
+    font-size: 0.62rem;
+}
+
+.year-card:nth-child(7) {
+    grid-column: 3;
+}
+
+.year-card:nth-child(8) {
+    grid-column: 4;
+}
+
+.year-card:nth-child(9) {
+    grid-column: 5;
+}
+
+
+/* =========================
+   TOKEN INFO
+========================= */
+
+.token-info-section {
+    min-height: 52rem;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 4rem 5% 6rem;
+
+    border-top-left-radius: 9rem;
+}
+
+.token-info-background {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 0;
+}
+
+.token-info-wrapper {
+    width: 82%;
+
+    max-width: 72rem;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* CARDS */
+
+.token-info-card {
+    width: 58%;
+
+    padding: 3rem 3.5rem;
+
+    background: white;
+
+    color: #0d1220;
+
+    text-align: center;
+
+    border-radius: 1.25rem;
+}
+
+.token-info-card h2 {
+    max-width: 30rem;
+
+    margin: 0 auto 1.8rem;
+
+    font-size: 1.35rem;
+
+    line-height: 1.2;
+}
+
+.token-info-card strong {
+    display: block;
+
+    font-size: 3.8rem;
+
+    line-height: 1;
+}
+
+.token-info-card span {
+    display: block;
+
+    margin-top: 0.5rem;
+
+    text-align: right;
+
+    color: #555b67;
+
+    font-size: 0.7rem;
+}
+
+.total-card {
+    margin-left: auto;
+
+    margin-right: 5%;
+}
+
+.total-card strong {
+    color: #20b86a;
+}
+
+.genesis-card {
+    margin-top: 2rem;
+
+    margin-left: 3%;
+}
+
+.genesis-card strong {
+    color: #ffd100;
+}
+
+.genesis-card p {
+    max-width: 32rem;
+
+    margin: 1.7rem auto 0;
+
+    color: #7a808c;
+
+    line-height: 1.5;
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    width: 90%;
+
+    margin: auto;
+
+    padding: 3rem 0 2rem;
+}
+
+.footer-nav {
+    padding-bottom: 2rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+.footer-nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.footer-bottom {
+    padding-top: 1.5rem;
+
+    border-top: 1px solid #20283a;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 130px;
+}
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 0.8rem;
+}
+
+.social-links a {
+    color: white;
+
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: right;
+
+    color: #8c93a5;
+
+    font-size: 0.72rem;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .years-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .year-card:nth-child(7),
+    .year-card:nth-child(8),
+    .year-card:nth-child(9) {
+        grid-column: auto;
+    }
+
+    .token-info-card {
+        width: 70%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        width: 92%;
+
+        padding: 1rem 0;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .main-nav,
+    .header-actions {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+
+    .tokenomics-hero {
+        width: 90%;
+
+        padding: 3rem 0 1rem;
+    }
+
+    .tokenomics-heading {
+        margin-bottom: 2.5rem;
+    }
+
+    .tokenomics-heading h1 {
+        font-size: 1.7rem;
+    }
+
+    .total-supply {
+        margin-top: 0;
+
+        text-align: left;
+    }
+
+    .total-supply strong {
+        font-size: 2.8rem;
+    }
+
+
+    .distribution-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .preminted {
+        order: 1;
+    }
+
+    .token-chart {
+        order: 2;
+    }
+
+    .daily {
+        order: 3;
+
+        text-align: right;
+    }
+
+
+    .years-section {
+        width: 90%;
+    }
+
+    .years-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .year-card:nth-child(7),
+    .year-card:nth-child(8),
+    .year-card:nth-child(9) {
+        grid-column: auto;
+    }
+
+
+    .token-info-section {
+        min-height: auto;
+
+        padding: 4rem 1rem 5rem;
+    }
+
+    .token-info-wrapper {
+        width: 100%;
+    }
+
+    .token-info-card {
+        width: 100%;
+
+        padding: 2.5rem 1.5rem;
+    }
+
+    .token-info-card strong {
+        font-size: 2.6rem;
+    }
+
+    .total-card,
+    .genesis-card {
+        margin-left: 0;
+
+        margin-right: 0;
+    }
+
+    .genesis-card {
+        margin-top: 2rem;
+    }
+
+
+    .footer-nav {
+        display: none;
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+        text-align: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+}

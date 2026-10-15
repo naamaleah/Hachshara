@@ -1,0 +1,568 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 30% 15%,
+            rgba(111, 31, 53, 0.35),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 100% 40%,
+            rgba(0, 126, 190, 0.35),
+            transparent 30%
+        ),
+        #0d1220;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    width: 94%;
+
+    margin: auto;
+
+    padding: 1.5rem 0;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 150px;
+
+    display: block;
+}
+
+.main-nav {
+    margin-left: 2.5rem;
+
+    display: flex;
+
+    gap: 1.5rem;
+}
+
+.main-nav a,
+.header-actions a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+}
+
+.header-actions {
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.sign-up {
+    padding: 0.7rem 1.4rem;
+
+    border: 1px solid #20c878;
+
+    border-radius: 2rem;
+}
+
+.menu-button {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   TEAM SECTION
+========================= */
+
+.team-section {
+    width: 82%;
+
+    margin: auto;
+
+    padding: 4rem 0 6rem;
+}
+
+.team-heading {
+    margin-bottom: 2rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.team-heading h1 {
+    margin: 0;
+
+    font-size: 2rem;
+}
+
+
+/* ARROWS */
+
+.team-arrows {
+    display: flex;
+
+    gap: 0.7rem;
+}
+
+.team-arrow {
+    width: 2.6rem;
+
+    height: 2.6rem;
+
+    border: 1px solid #30384c;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   TEAM SLIDER
+========================= */
+
+.team-slider {
+    overflow: hidden;
+}
+
+.team-track {
+    display: flex;
+
+    gap: 1rem;
+}
+
+
+/* =========================
+   TEAM CARD
+========================= */
+
+.team-card {
+    min-width: calc((100% - 4rem) / 5);
+
+    min-height: 24rem;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #080712;
+
+    border-radius: 1.2rem;
+}
+
+.member-info {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 1.5rem 1.5rem 0;
+}
+
+.member-info h2 {
+    margin: 0 0 0.3rem;
+
+    font-size: 0.9rem;
+}
+
+.member-info p {
+    margin: 0;
+
+    color: #c2c5cd;
+
+    font-size: 0.7rem;
+}
+
+.team-card img {
+    width: 100%;
+
+    height: 82%;
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    object-fit: contain;
+
+    object-position: center bottom;
+}
+
+
+/* =========================
+   DOTS
+========================= */
+
+.team-dots {
+    display: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    width: 82%;
+
+    margin: auto;
+
+    padding: 3rem 0 3rem;
+}
+
+.footer-nav {
+    padding-bottom: 3rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.footer-nav a {
+    color: white;
+
+    text-decoration: underline;
+
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+}
+
+.footer-nav span {
+    color: #4b5366;
+}
+
+.footer-bottom {
+    padding-top: 1.5rem;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 140px;
+}
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 0.7rem;
+}
+
+.social-links a {
+    width: 2.2rem;
+
+    height: 2.2rem;
+
+    border: 1px solid #30384c;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+}
+
+.copyright {
+    margin: 0;
+
+    color: #c0c4cc;
+
+    text-align: right;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .team-section,
+    .site-footer {
+        width: 90%;
+    }
+
+    .team-card {
+        min-width: calc((100% - 2rem) / 3);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        background:
+            radial-gradient(
+                circle at 50% 10%,
+                rgba(26, 71, 120, 0.2),
+                transparent 35%
+            ),
+            #0d1220;
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+        width: 90%;
+
+        padding: 1.2rem 0;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .main-nav,
+    .header-actions {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+
+        font-size: 1.5rem;
+    }
+
+
+    /* TEAM */
+
+    .team-section {
+        width: 90%;
+
+        padding: 2rem 0 3rem;
+    }
+
+    .team-heading {
+        margin-bottom: 1rem;
+    }
+
+    .team-heading h1 {
+        font-size: 1.6rem;
+    }
+
+    .team-arrows {
+        display: none;
+    }
+
+
+    /* MOBILE SLIDER */
+
+    .team-slider {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .team-track {
+        width: 500%;
+
+        display: flex;
+
+        gap: 0;
+
+        transition: transform 0.5s ease;
+    }
+
+    .team-card {
+        width: 20%;
+
+        min-width: 20%;
+
+        min-height: 32rem;
+
+        border-radius: 1.2rem;
+    }
+
+    .member-info {
+        padding: 1.5rem;
+    }
+
+    .member-info h2 {
+        font-size: 1rem;
+    }
+
+    .member-info p {
+        font-size: 0.75rem;
+    }
+
+    .team-card img {
+        height: 82%;
+    }
+
+
+    /* DOTS */
+
+    .team-dots {
+        margin-top: 1.2rem;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 0.5rem;
+    }
+
+    .team-dot {
+        width: 0.4rem;
+
+        height: 0.4rem;
+
+        padding: 0;
+
+        border: none;
+
+        border-radius: 50%;
+
+        background-color:
+            rgba(255, 255, 255, 0.35);
+
+        cursor: pointer;
+    }
+
+    .team-dot.active {
+        background-color: white;
+
+        transform: scale(1.4);
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        width: 90%;
+
+        padding: 2rem 0 2rem;
+    }
+
+    .footer-nav {
+        display: none;
+    }
+
+    .footer-bottom {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 1.5rem;
+
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 135px;
+    }
+
+    .social-links {
+        order: 2;
+    }
+
+    .copyright {
+        order: 3;
+
+        text-align: center;
+
+        font-size: 0.65rem;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+
+    .team-heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .team-card {
+        min-height: 29rem;
+    }
+
+}
