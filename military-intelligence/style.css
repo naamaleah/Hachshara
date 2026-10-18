@@ -92,3 +92,151 @@ body {
         transform: scale(1);
     }
 }
+
+
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.radar-panel {
+    display: flex;
+    align-items: center;
+    gap: 16rem;
+
+    padding: 1.5rem;
+    min-height: 12rem;
+
+    background-color: #15121e;
+    border: 1px solid #292434;
+    border-radius: 0.7rem;
+}
+
+/* Radar */
+
+.radar {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 1px hsla(0, 0%, 0%, 0.5),
+        inset 0 0 0 1px hsla(0, 0%, 100%, 0.15);
+
+    
+
+background:
+    linear-gradient(
+        to bottom,
+        transparent calc(50% - 0.5px),
+        #17633b 50%,
+        transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+        to right,
+        transparent calc(50% - 0.5px),
+        #17633b 50%,
+        transparent calc(50% + 0.5px)
+    ),
+    radial-gradient(
+        circle,
+        #092317,
+        #06110c
+    );
+
+    
+border: 1px solid #008f3d;
+
+}
+
+/* Radar sweep */
+
+.sweep {
+    position: absolute;
+    box-sizing: border-box;
+
+    top: 6.5%;
+    left: 6.5%;
+
+    width: 43.5%;
+    height: 43.5%;
+
+    border-right: solid 1px hsla(145, 50%, 40%, 0.3);
+    border-radius: 100% 0 0 0;
+
+    transform-origin: 100% 100%;
+
+    background: linear-gradient(
+        50deg,
+        rgba(34, 34, 34, 0) 56%,
+        hsla(145, 50%, 40%, 1)
+    );
+
+    animation: sweep 5s infinite linear;
+}
+
+@keyframes sweep {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Statistics */
+
+.radar-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat h2 {
+    color: #00e566;
+    font-size: 1.5rem;
+}
+
+.stat p {
+    color: #92909a;
+    font-size: 0.6rem;
+    letter-spacing: 0.06rem;
+}
+
+
+.radar-dot {
+    position: absolute;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background-color: #00e65c;
+    box-shadow: 0 0 0.6rem #00ff66;
+    animation: dot-pulse 2s infinite alternate;
+}
+
+.dot-1 {
+    top: 52%;
+    left: 33%;
+}
+
+.dot-2 {
+    top: 68%;
+    left: 70%;
+}
+
+.dot-3 {
+    top: 27%;
+    left: 60%;
+}
+
+@keyframes dot-pulse {
+    from {
+        opacity: 0.35;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
