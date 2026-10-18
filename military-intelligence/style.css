@@ -27,7 +27,8 @@ body {
 
 }
 
-.header-logo{
+
+.header-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +37,12 @@ body {
     height: 2rem;
     border-radius: 50%;
     background-color: #00D939;
-    overflow: hidden;
+
+    overflow: visible;
+
+    transition: box-shadow 0.6s ease;
+
+    cursor: pointer
 }
 
 .header-logo img {
@@ -44,7 +50,13 @@ body {
     height: 70%;
     object-fit: contain;
     display: block;
+
+    transform: rotate(0deg);
+    transition: transform 0.6s ease;
+
+       pointer-events: none;
 }
+
 
 .header-title {
     color: #00dd55;
@@ -112,8 +124,13 @@ main {
     background-color: #15121e;
     border: 1px solid #292434;
     border-radius: 0.7rem;
+    transition: 0.3s ease-in-out;
 }
 
+.radar-panel:hover {
+    border-color: #00b84d;
+
+}
 /* Radar */
 
 .radar {
@@ -428,13 +445,17 @@ border: 1px solid #008f3d;
 }
 
 
+
 .intel-card:hover {
     transform: rotate(2deg);
 
+    border-color: #1f7740;
+
     box-shadow:
-        0 0.5rem 1.5rem rgba(0, 0, 0, 0),
-        0 0 0.8rem var(--accent-color);
+        0 0.10rem 0.8rem rgba(0, 0, 0, 0.25),
+        0 0 0.10rem rgba(0, 150, 65, 0.12);
 }
+
 .progress{
     display: flex;
     align-items: center;
@@ -477,7 +498,7 @@ border: 1px solid #008f3d;
 .threat-indicator {
     position: absolute;
     top: 0.5rem;
-    right: 0.6rem;
+    left: 0.6rem;
 
     width: 0.45rem;
     height: 0.45rem;
@@ -491,17 +512,7 @@ border: 1px solid #008f3d;
     animation: threat-pulse 1.2s ease-in-out infinite;
 }
 
-@keyframes threat-pulse {
-    0%, 100% {
-        opacity: 1;
-        box-shadow: 0 0 0.2rem #ff4167;
-    }
 
-    50% {
-        opacity: 0.4;
-        box-shadow: 0 0 0.7rem #ff4167;
-    }
-}
 
 
 .threat-alert:hover {
@@ -524,3 +535,137 @@ border: 1px solid #008f3d;
     box-shadow: 0 0 0.8rem #ff1744;
 }
     
+
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    align-items: center;
+
+    width: 100%;
+    padding: 0.5rem 2%;
+
+    background-color: #100f17;
+    border-top: 1px solid #302737;
+
+    z-index: 100;
+}
+
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+
+    padding: 0.5rem;
+
+    text-decoration: none;
+    color: #85818f;
+
+    border-bottom: 2px solid transparent;
+
+    font-size: 0.65rem;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-item img {
+    width: 1rem;
+    height: 1rem;
+    filter: invert(0.6);
+}
+
+
+.help-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.help-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    background-color: #29292e;
+    color: #b5b5bc;
+
+    border-radius: 50%;
+    border: none;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.help-button:hover .help-icon {
+    background-color: #3a3a42;
+    color: #ffffff;
+}
+
+
+body {
+    padding-bottom: 5rem;
+}
+
+
+
+.nav-item:hover {
+    color: #00e566;
+    transform: translateY(-2px);
+}
+
+.nav-item:hover img {
+    filter: brightness(0) saturate(100%)
+            invert(65%) sepia(91%)
+            saturate(954%) hue-rotate(88deg)
+            brightness(105%) contrast(105%);
+}
+
+
+
+.nav-item[aria-current="page"] {
+    color: #00e566;
+    border-bottom-color: #00e566;
+}
+
+body:has(#dashboard:target) .nav-item {
+    border-bottom-color: transparent;
+    color: #85818f;
+}
+
+body:has(#dashboard:target) .nav-item[href="#dashboard"] {
+    border-bottom-color: #00e566;
+    color: #00e566;
+}
+
+
+
+
+.header-logo:hover img {
+    transform: rotate(180deg);
+}
+
+.header-logo:hover {
+    box-shadow:
+        0 0 0.5rem #00ff66,
+        0 0 1rem rgba(0, 255, 102, 0.6);
+}
