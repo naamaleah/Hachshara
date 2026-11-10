@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "TestPlayer",
+    "lowestTime": 1.523
+  },
+  {
+    "id": 2,
+    "name": "Sarah",
+    "lowestTime": null
+  },
+  {
+    "id": 3,
+    "name": "bla",
+    "lowestTime": null
+  }
+]
